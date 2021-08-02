@@ -17,7 +17,7 @@ from channels.auth import AuthMiddlewareStack
 from channels.security.websocket import AllowedHostsOriginValidator
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangosocket.settings')
-
+django.setup()
 application = get_asgi_application()
 ws_patterns=[path('test/<room_name>/',ChatConsumer.as_asgi())]
 
