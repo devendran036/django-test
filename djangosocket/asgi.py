@@ -11,7 +11,7 @@ import os
 import django
 from channels.routing import ProtocolTypeRouter, URLRouter,get_default_application
 from django.urls import path, re_path
-from chatew.consumers import ChatConsumer
+from newto.consumers import ChatConsumer
 from django.core.asgi import get_asgi_application
 from channels.auth import AuthMiddlewareStack
 from channels.security.websocket import AllowedHostsOriginValidator
