@@ -1,0 +1,21 @@
+<h1>{{user}}</h1>
+<div id='message'></div>
+<input id='userr' type="text" placeholder="username">
+<input id='mess' type="text" placeholder="text">
+
+<button onclick="send()">Send</button>
+<script>
+    chatSocket = new WebSocket('ws://127.0.0.1:8000/test/{{user.id}}/')
+    chatSocket.onopen = function(e){
+			
+           
+		}
+    chatSocket.onmessage = function (event) {
+    a=JSON.parse(event.data)
+  document.getElementById('message').innerHTML=a['message']
+}
+function send(){
+    chatSocket.send(JSON.stringify({'room':'room_'+document.getElementById('userr').value,'mess':document.getElementById('mess').value}))
+
+}
+</script>
