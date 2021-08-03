@@ -19,8 +19,7 @@ from channels.auth import AuthMiddlewareStack
 from channels.security.websocket import AllowedHostsOriginValidator
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'devpychatupdated.settings')
 django.setup()
-if not settings.configured:
-    settings.configure()
+settings.configure()
 application = get_asgi_application()
 
 ws_patterns=[path('user/<id>/',ChatConsumer.as_asgi())]
