@@ -11,8 +11,7 @@ import os
 import django 
 from channels.routing import ProtocolTypeRouter, URLRouter,get_default_application
 from django.conf import settings
-if not settings.configured:
-    settings.configure()
+
 from register.consumers import ChatConsumer
 from django.core.asgi import get_asgi_application
 from django.urls import path, re_path
@@ -20,6 +19,8 @@ from channels.auth import AuthMiddlewareStack
 from channels.security.websocket import AllowedHostsOriginValidator
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'devpychatupdated.settings')
 django.setup()
+if not settings.configured:
+    settings.configure()
 application = get_asgi_application()
 
 ws_patterns=[path('user/<id>/',ChatConsumer.as_asgi())]
