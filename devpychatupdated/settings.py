@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-50(rjt7b7!1-vk9=tawntuw+ktyr(r=5lul0bld!gsl6*(*$f8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangochannelstest.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['djangosockettest.herokuapp.com','127.0.0.1']
 
 
 # Application definition
