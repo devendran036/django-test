@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from register.forms import CreateUserForm
-from django.contrib.auth.models import User
+
 from django.http import HttpResponse
 from register.models import *
 from post.models import *
