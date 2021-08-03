@@ -38,15 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'post',
-    'friendrequest',
-    
-    
-    'channels',
-    'API',
-    
     'register',
+    'friendrequest',
+    'post',
+    'API',
+    'channels',
     'rest_framework',
+    
+    
+    
     
     
 ]
