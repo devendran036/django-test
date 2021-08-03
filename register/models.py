@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.utils import timezone
 from friendrequest.models import FriendList
 # Create your models here.
@@ -9,7 +8,7 @@ from friendrequest.models import FriendList
     
         
 class profiledata(models.Model):
-    user=models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
+    user=models.OneToOneField(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.CASCADE)
     profile_pic = models.ImageField(default="cover.jpg", null=True, blank=True)
 
     name=models.CharField(max_length=50,null=True,blank=True)
@@ -43,7 +42,7 @@ class FilesAdmin(models.Model):
 class messagesave(models.Model):
     hashtag=models.IntegerField()
     messagd=models.TextField(blank=False)
-    receiver=models.ForeignKey(User,on_delete=models.CASCADE,null=False,blank=False)
+    receiver=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=False,blank=False)
     messagedate= models.DateTimeField(auto_now_add=True, null=True) 
     messagetype=models.CharField(max_length=10,default='text')
    
