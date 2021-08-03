@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-50(rjt7b7!1-vk9=tawntuw+ktyr(r=5lul0bld!gsl6*(*$f8
 DEBUG = False
 
 ALLOWED_HOSTS = ['djangosockettest.herokuapp.com','127.0.0.1']
-
+os.environ['DJANGO_SETTINGS_MODULE'] = 'devpychatupdated.settings'
 
 # Application definition
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     
     
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
