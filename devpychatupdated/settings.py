@@ -31,6 +31,13 @@ ALLOWED_HOSTS = ['djangosockettest.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
     'post',
     'friendrequest',
     
@@ -40,12 +47,6 @@ INSTALLED_APPS = [
     
     'register',
     'rest_framework',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
     
     
 ]
