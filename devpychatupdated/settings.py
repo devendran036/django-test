@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'devpychatupdated.wsgi.application'
+#WSGI_APPLICATION = 'devpychatupdated.wsgi.application'
 
 ASGI_APPLICATION = 'devpychatupdated.asgi.application'
 
