@@ -10,6 +10,9 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 import os
 import django 
 from channels.routing import ProtocolTypeRouter, URLRouter,get_default_application
+from django.conf import settings
+if not settings.configured:
+    settings.configure()
 from register.consumers import ChatConsumer
 from django.core.asgi import get_asgi_application
 from django.urls import path, re_path
