@@ -5,7 +5,14 @@
 
 <button onclick="send()">Send</button>
 <script>
-    chatSocket = new WebSocket('ws://'+location.host+'/test/{{user.id}}/')
+var u=""
+     if('https:'==location.protocol){
+        u='wss://'
+}
+else{
+  u="ws://"
+}
+    chatSocket = new WebSocket(u+location.host+'/test/{{user.id}}/')
     chatSocket.onopen = function(e){
 			
            
