@@ -1,2 +1,2 @@
 web: daphne devpychatupdated.asgi:application --port $PORT --bind 0.0.0.0 -v2
-chatworker: python mange.py runworker --settings=chat.settings -v2
+chatworker: python manage.py runworker --settings=devpychatupdated.settings -v2
